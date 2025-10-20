@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
 
+
     <title>Frontend Mentor | Age calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -30,21 +31,24 @@
     <div id="main-container">
       <div id="content">
         <div id="input-container">
-          <div class="inputs">
+          <div>
             <label>
               DAY
+              <br>
               <input type="number" />
             </label>
           </div>
-          <div class="inputs">
+          <div>
             <label>
               MONTH
+              <br>
               <input type="number" />
             </label>
           </div>
-          <div class="inputs">
+          <div>
             <label>
               YEAR
+              <br>
               <input type="number" />
             </label>
           </div>
@@ -54,11 +58,12 @@
           <img src="./assets/images/icon-arrow.svg" alt="enter">
         </button>
         <div id="output">
-          <p><span>--</span>years</p>
-          <p><span>--</span>months</p>
-          <p><span>--</span>days</p>
+          <p><span id="years">--</span>years</p>
+          <p><span id="months">--</span>months</p>
+          <p><span id="days">--</span>days</p>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
