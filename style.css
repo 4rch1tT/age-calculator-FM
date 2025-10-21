@@ -66,7 +66,7 @@ body {
 
 #content {
   height: 330px;
-  width: 420px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 100%, 100%);
@@ -75,7 +75,7 @@ body {
   border-radius: 10px 10px 120px 10px;
 }
 
-#input-container {
+#age-form {
   display: flex;
   gap: 25px;
   margin-bottom: 30px;
@@ -89,8 +89,8 @@ body {
   width: 55px;
   padding: 5px;
   background-color: hsl(259, 100%, 65%);
-  top: 95px;
-  left: 345px;
+  top: 85px;
+  left: 365px;
 }
 
 #btn:hover {
@@ -99,10 +99,15 @@ body {
 
 label {
   font-family: "Poppins", sans-serif;
-  font-size: small;
-  font-weight: bold;
+  font-size: x-small;
+  font-weight: 700;
   letter-spacing: 2.5px;
   color: hsl(0, 1%, 44%);
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -110,7 +115,8 @@ input {
   height: 30px;
   margin-top: 5px;
   border: 1px solid hsl(0, 0%, 86%);
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 1px;
   border-radius: 3px;
   padding: 16px 8px;
 }
@@ -125,7 +131,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -145,11 +151,29 @@ img {
 p {
   font-size: 40px;
   font-style: italic;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 span {
   color: hsl(259, 100%, 65%);
   font-style: italic;
-  font-weight: bolder;
+  font-weight: 800;
+}
+
+#day-error {
+  color: hsl(0, 100%, 67%);
+  font-size: x-small;
+  padding: 0;
+}
+
+#month-error {
+  color: hsl(0, 100%, 67%);
+  font-size: x-small;
+  padding: 0;
+}
+
+#year-error {
+  color: hsl(0, 100%, 67%);
+  font-size: x-small;
+  padding: 0;
 }

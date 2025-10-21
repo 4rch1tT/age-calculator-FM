@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -13,50 +12,41 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-
     <title>Frontend Mentor | Age calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div id="main-container">
       <div id="content">
-        <div id="input-container">
-          <div>
+        <form id="age-form">
+          <div class="input-div">
             <label>
               DAY
-              <br>
-              <input type="number" />
+              <br />
+              <input type="number" id="day" placeholder="DD" />
             </label>
+            <small id="day-error"></small>
           </div>
-          <div>
+          <div class="input-div">
             <label>
               MONTH
-              <br>
-              <input type="number" />
+              <br />
+              <input type="number" id="month" placeholder="MM" />
             </label>
+            <small id="month-error"></small>
           </div>
-          <div>
+          <div class="input-div">
             <label>
               YEAR
-              <br>
-              <input type="number" />
+              <br />
+              <input type="number" id="year" placeholder="YYYY" />
             </label>
+            <small id="year-error"></small>
           </div>
-        </div>
+          <button id="btn" type="submit">
+            <img src="./assets/images/icon-arrow.svg" alt="enter" />
+          </button>
+        </form>
         <hr />
-        <button id="btn">
-          <img src="./assets/images/icon-arrow.svg" alt="enter">
-        </button>
         <div id="output">
           <p><span id="years">--</span>years</p>
           <p><span id="months">--</span>months</p>
