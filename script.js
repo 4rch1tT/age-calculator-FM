@@ -26,18 +26,31 @@ function validate() {
 
   if (!yearInput.value) {
     yearInput.style.borderColor = "hsl(0, 100%, 67%)";
-    yearError.innerText = "this field is required";
+    yearInput.style.outline = "none";
+    yearError.innerText = "This field is required";
     isValid = false;
   }
   if (!monthInput.value) {
     monthInput.style.borderColor = "hsl(0, 100%, 67%)";
-    monthError.innerText = "this field is required";
+    monthInput.style.outline = "none";
+    monthError.innerText = "This field is required";
     isValid = false;
   }
   if (!dayInput.value) {
     dayInput.style.borderColor = "hsl(0, 100%, 67%)";
-    dayError.innerText = "this field is required";
+    dayInput.style.outline = "none";
+    dayError.innerText = "This field is required";
     isValid = false;
+  }
+
+  if (dayInput.value && monthInput.value && yearInput.value) {
+    dayError.innerText = "";
+    monthError.innerText = "";
+    yearError.innerText = "";
+
+    dayInput.style.borderColor = "hsl(0, 0%, 86%)";
+    monthInput.style.borderColor = "hsl(0, 0%, 86%)";
+    yearInput.style.borderColor = "hsl(0, 0%, 86%)";
   }
 
   if (yearInput.value > year) {

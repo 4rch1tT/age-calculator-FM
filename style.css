@@ -65,7 +65,7 @@ body {
 }
 
 #content {
-  height: 330px;
+  height: 340px;
   width: 450px;
   display: flex;
   flex-direction: column;
@@ -77,23 +77,31 @@ body {
 
 #age-form {
   display: flex;
+  flex-direction: column;
+}
+
+#form-container {
+  display: flex;
   gap: 25px;
-  margin-bottom: 30px;
+}
+
+#submit-div {
+  display: flex;
+  align-items: center;
+}
+
+#submit-div hr {
+  width: 100%;
 }
 
 #btn {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 50%;
-  height: 55px;
-  width: 55px;
-  padding: 5px;
+  padding: 12px;
   background-color: hsl(259, 100%, 65%);
-  top: 85px;
-  left: 365px;
-}
-
-#btn:hover {
   cursor: pointer;
 }
 
@@ -140,10 +148,6 @@ hr {
   border-color: hsl(0, 0%, 86%);
 }
 
-#output {
-  padding: 10px 0px 0px 0px;
-}
-
 img {
   height: 30px;
 }
@@ -158,22 +162,29 @@ span {
   color: hsl(259, 100%, 65%);
   font-style: italic;
   font-weight: 800;
+  margin-right: 2px;
 }
 
 #day-error {
   color: hsl(0, 100%, 67%);
-  font-size: x-small;
+  font-size: xx-small;
+  font-style: italic;
+  font-weight: 400;
   padding: 0;
 }
 
 #month-error {
   color: hsl(0, 100%, 67%);
-  font-size: x-small;
+  font-size: xx-small;
+  font-style: italic;
+  font-weight: 400;
   padding: 0;
 }
 
 #year-error {
   color: hsl(0, 100%, 67%);
-  font-size: x-small;
+  font-size: xx-small;
+  font-style: italic;
+  font-weight: 400;
   padding: 0;
 }
