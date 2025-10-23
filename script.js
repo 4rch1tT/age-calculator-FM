@@ -63,13 +63,20 @@ function validate() {
     monthError.innerText = "Must be a valid month";
     isValid = false;
   }
-  if (dayInput.value > 31) {
+  if (monthInput.value === 2 && isLeapYear(yearInput.value)) {
+    months[1] = 29;
+  }
+  if (dayInput.value < 1 || dayInput.value > months[monthInput.value - 1]) {
     dayInput.style.borderColor = "hsl(0, 100%, 67%)";
     dayError.innerText = "Must be a valid day";
     isValid = false;
   }
 
   return isValid;
+}
+
+function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
 ageForm.addEventListener("submit", (event) => {
@@ -92,5 +99,9 @@ ageForm.addEventListener("submit", (event) => {
     daysOutput.innerHTML = d;
     monthsOutput.innerHTML = m;
     yearsOutput.innerHTML = y;
+
+    dayInput.value = "";
+    monthInput.value = "";
+    yearInput.value = "";
   }
 });
