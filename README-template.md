@@ -1,24 +1,20 @@
 # Frontend Mentor - Age calculator app solution
 
-This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+
+The Age Calculator App is a sleek, interactive tool that allows users to input their date of birth and instantly see their exact age broken down into years, months, and days.
 
 ### The challenge
 
@@ -33,26 +29,59 @@ Users should be able to:
   - The date is invalid e.g. 31/04/1991 (there are 30 days in April)
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: See the age numbers animate to their final number when the form is submitted
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Age Calculator](https://age-calculator-f.netlify.app/)
 
 ## My process
+
+### 1. Understanding the Challenge
+
+- Carefully reviewed the [Frontend Mentor brief](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q) and design files.
+- Identified key requirements: form validation, accurate age calculation, responsive layout, and accessibility.
+
+### 2. Project Setup
+
+- Initialized the project using HTML, CSS, and vanilla JavaScript, keeping dependencies minimal and focusing on core web fundamentals.
+- Structured the project with separate folders for assets, styles, and scripts to maintain clarity and modularity.
+- Linked external CSS and JS files to the HTML for clean separation of concerns.
+- Used semantic HTML elements to enhance accessibility and maintainability.
+
+### 3. Building the UI
+
+- Translated the provided design into a responsive layout using **CSS Flexbox/Grid**.
+- Ensured pixel-perfect alignment and spacing across breakpoints (mobile and desktop).
+
+### 4. Implementing Logic
+
+- Instead of relying on JavaScript's built-in Date object, I manually implemented the age calculation logic from scratch.
+- Parsed and validated day, month, and year inputs individually.
+- Calculated the difference between the current date and the input date using custom arithmetic, accounting for:
+- Leap years
+- Month boundaries
+- Day rollovers
+- Ensured the final output accurately reflects the user's age in years, months, and days, even for edge cases like birthdays on February 29 or dates near month/year transitions.
+
+### 5. Form Validation
+
+- Used controlled inputs and custom validation logic to ensure users enter valid day, month, and year values.
+- Displayed contextual error messages for each field to guide user correction.
+
+### 6. Testing & Debugging
+
+- Manually tested various date inputs to verify accuracy and UX.
+- Used console logs and step-by-step tracing to debug calculation logic and validation flow.
+
+### 7. Responsive & Accessible Design
+
+- Verified layout responsiveness across screen sizes.
+- Added semantic HTML and ARIA labels for better accessibility.
+
+### 8. Final Touches
+
+- Polished UI interactions and transitions.
+- Reviewed code for readability, modularity, and DRY principles.
 
 ### Built with
 
@@ -61,59 +90,20 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Javascript for form validation and logic
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Building the Age Calculator App with vanilla JavaScript taught me several valuable lessons:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- Manual date logic deepens understanding: Implementing age calculation without relying on the Date object pushed me to think critically about how calendars work—especially leap years, month lengths, and rollover scenarios.
+- Validation is more than just checking inputs: Designing robust form validation meant anticipating user behavior, handling edge cases, and delivering clear, helpful error messages.
+- Modularity improves maintainability: Separating logic into reusable functions made the code easier to debug, test, and extend.
+- Responsive design requires planning: Ensuring the layout worked across devices taught me the importance of flexible units, media queries, and mobile-first styling.
+- Small projects can sharpen fundamentals: Even a simple app like this reinforces core skills—DOM manipulation, event handling, and clean UI/UX design.
+  This challenge reminded me that mastering the basics is key to building scalable, user-friendly applications.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [4rch1tT](https://www.frontendmentor.io/profile/4rch1tT)
+- Github - [4rch1tT](https://www.github.com/4rch1tT)
